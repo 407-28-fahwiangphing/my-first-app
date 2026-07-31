@@ -10,8 +10,8 @@ if st.button("คำนวนค่า BMI"):
    height_m = height_cm ** 2
    bmi = weight / (height_m ** 2)
 
-st.write("---")
-st.header(f"ค่าbmiของคุณคือ: **{bmi:.2f}**")
+   st.write("---")
+   st.header(f"ค่าbmiของคุณคือ: **{bmi:.2f}**")
 
 if mbi < 18.5:
    st.warning("คุณมีน้ำหนักน้อยกว่าเกณฑ์ (ผอม)")
