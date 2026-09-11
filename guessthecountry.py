@@ -24,27 +24,7 @@ if "ans9_val" not in st.session_state:
     st.session_state.ans1_val = ""
 if "ans10_val" not in st.session_state:
     st.session_state.ans2_val = ""
-if "ans11_val" not in st.session_state:
-    st.session_state.ans3_val = ""
-if "ans12_val" not in st.session_state:
-    st.session_state.ans4_val = ""
-if "ans13_val" not in st.session_state:
-    st.session_state.ans1_val = ""
-if "ans14_val" not in st.session_state:
-    st.session_state.ans2_val = ""
-if "ans15_val" not in st.session_state:
-    st.session_state.ans3_val = ""
-if "ans16_val" not in st.session_state:
-    st.session_state.ans4_val = ""
-if "ans17_val" not in st.session_state:
-    st.session_state.ans1_val = ""
-if "ans18_val" not in st.session_state:
-    st.session_state.ans2_val = ""
-if "ans19_val" not in st.session_state:
-    st.session_state.ans3_val = ""
-if "ans20_val" not in st.session_state:
-    st.session_state.ans4_val = ""
-  
+
 # 📌 ฟังก์ชันเคลียร์ค่าเมื่อกดปุ่มเริ่มใหม่
 def reset_game():
     st.session_state.start = time.time()  # เริ่มเวลาใหม่
@@ -55,7 +35,7 @@ def reset_game():
 # 📌 ฟังก์ชัน MessageBox (Dialog)
 # ----------------------------------------------------
 @st.dialog("📊 สรุปผลการเล่นเกม")
-def show_result_dialog(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10, ans11, ans12, ans13, ans14, ans15, ans16, ans17, ans18, ans19, ans20):
+def show_result_dialog(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10):
     st.balloons()
     score = 0
 
@@ -63,44 +43,77 @@ def show_result_dialog(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans
     u_ans2 = ans2.strip().lower()
     u_ans3 = ans3.strip().lower()
     u_ans4 = ans4.strip().lower()
-    u_ans1 = ans5.strip().lower()
-    u_ans2 = ans6.strip().lower()
-    u_ans3 = ans7.strip().lower()
-    u_ans4 = ans8.strip().lower()
+    u_ans5 = ans5.strip().lower()
+    u_ans6 = ans6.strip().lower()
+    u_ans7 = ans7.strip().lower()
+    u_ans8 = ans8.strip().lower()
+    u_ans9 = ans9.strip().lower()
+    u_ans10 = ans10.strip().lower()
 
-    # ตรวจข้อ 1
-    if u_ans1 == "apple":
-        st.success("✅ ข้อ 1: ถูกต้อง")
-        score += 1
-    else:
-        st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')")
+   if u_ans1.strip().lower() in ["Mexico", "แม็กซิโก"]:
+    st.success("✅ ข้อ 1: ถูกต้อง")
+    score += 1
+else:
+    st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')"
+             
+   if u_ans2.strip().lower() in ["Egypt", "อียิปต์", "อียิป"]:
+    st.success("✅ ข้อ 2: ถูกต้อง")
+    score += 1
+else:
+    st.error(f"❌ ข้อ 2: ยังไม่ถูกต้อง (คุณตอบ '{u_ans2}')")
+    
+    if u_ans3.strip().lower() in ["Japan", "ญี่ปุ่น"]:
+    st.success("✅ ข้อ 3: ถูกต้อง")
+    score += 1
+else:
+    st.error(f"❌ ข้อ 3: ยังไม่ถูกต้อง (คุณตอบ '{u_ans3}')")
+    
+if u_ans4.strip().lower() in ["South Korea", "เกาหลีใต้"]:
+    st.success("✅ ข้อ 4: ถูกต้อง")
+    score += 1
+else:
+    st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans4}')"
+             
+   if u_ans5.strip().lower() in ["Columbia", "โคลัมเบีย"]:
+    st.success("✅ ข้อ 5: ถูกต้อง")
+    score += 1
+else:
+    st.error(f"❌ ข้อ 5: ยังไม่ถูกต้อง (คุณตอบ '{u_ans5}')")
+    
+    if u_ans6.strip().lower() in ["Portugal", "โปรตุเกต", "โปรตุเกส", "โปรตุเกด"]:
+    st.success("✅ ข้อ 6: ถูกต้อง")
+    score += 1
+else:
+    st.error(f"❌ ข้อ 6: ยังไม่ถูกต้อง (คุณตอบ '{u_ans6}')")
+    if u_ans7.strip().lower() in ["France", "ฝรั่งเศส", "ฝรั่งเศด"]:
+    st.success("✅ ข้อ 7: ถูกต้อง")
+    score += 1
+else:
+    st.error(f"❌ ข้อ 7: ยังไม่ถูกต้อง (คุณตอบ '{u_ans7}')")
+    
+    if u_ans8.strip().lower() in ["Germany", "เยอรมนี"]:
+    st.success("✅ ข้อ 8: ถูกต้อง")
+    score += 1
+else:
+    st.error(f"❌ ข้อ 8: ยังไม่ถูกต้อง (คุณตอบ '{u_ans8}')"
+             
+   if u_ans9.strip().lower() in ["Argentina", "อาร์เจนตินา", "อาเจนตินา"]:
+    st.success("✅ ข้อ 9: ถูกต้อง")
+    score += 1
+else:
+    st.error(f"❌ ข้อ 9: ยังไม่ถูกต้อง (คุณตอบ '{u_ans9}')")
+    
+    if u_ans10.strip().lower() in ["South Africa", "แอฟริกาใต้"]:
+    st.success("✅ ข้อ 10: ถูกต้อง")
+    score += 1
+else:
+    st.error(f"❌ ข้อ 10: ยังไม่ถูกต้อง (คุณตอบ '{u_ans10}')")
 
-    # ตรวจข้อ 2
-    if u_ans2 == "fish":
-        st.success("✅ ข้อ 2: ถูกต้อง")
-        score += 1
-    else:
-        st.error(f"❌ ข้อ 2: ยังไม่ถูกต้อง (คุณตอบ '{u_ans2}')")
-        
- # ตรวจข้อ 3
-    if u_ans3 == "dog":
-        st.success("✅ ข้อ 3: ถูกต้อง")
-        score += 1
-    else:
-        st.error(f"❌ ข้อ 3: ยังไม่ถูกต้อง (คุณตอบ '{u_ans3}')")
-
-     # ตรวจข้อ 4
-    if u_ans4 == "love":
-        st.success("✅ ข้อ 4: ถูกต้อง")
-        score += 1
-    else:
-        st.error(f"❌ ข้อ 4: ยังไม่ถูกต้อง (คุณตอบ '{u_ans4}')")
-        
     st.info(f"🏆 ได้คะแนนรวม: {score} คะแนน")
 
     if score == 4:
         st.success("🎉 You win!")
-    else:
+else:
         st.error("💀 You lose!")
 
 
