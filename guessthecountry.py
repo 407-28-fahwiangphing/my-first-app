@@ -50,13 +50,13 @@ def show_result_dialog(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans
     u_ans9 = ans9.strip().lower()
     u_ans10 = ans10.strip().lower()
 
-   if u_ans1.strip().lower() in ["Mexico", "แม็กซิโก"]:
+    if u_ans1.strip().lower() in ["Mexico", "แม็กซิโก"]:
     st.success("✅ ข้อ 1: ถูกต้อง")
     score += 1
 else:
     st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')"
              
-   if u_ans2.strip().lower() in ["Egypt", "อียิปต์", "อียิป"]:
+    if u_ans2.strip().lower() in ["Egypt", "อียิปต์", "อียิป"]:
     st.success("✅ ข้อ 2: ถูกต้อง")
     score += 1
 else:
@@ -68,13 +68,13 @@ else:
 else:
     st.error(f"❌ ข้อ 3: ยังไม่ถูกต้อง (คุณตอบ '{u_ans3}')")
     
-if u_ans4.strip().lower() in ["South Korea", "เกาหลีใต้"]:
+    if u_ans4.strip().lower() in ["South Korea", "เกาหลีใต้"]:
     st.success("✅ ข้อ 4: ถูกต้อง")
     score += 1
 else:
     st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans4}')"
              
-   if u_ans5.strip().lower() in ["Columbia", "โคลัมเบีย"]:
+    if u_ans5.strip().lower() in ["Columbia", "โคลัมเบีย"]:
     st.success("✅ ข้อ 5: ถูกต้อง")
     score += 1
 else:
@@ -97,7 +97,7 @@ else:
 else:
     st.error(f"❌ ข้อ 8: ยังไม่ถูกต้อง (คุณตอบ '{u_ans8}')"
              
-   if u_ans9.strip().lower() in ["Argentina", "อาร์เจนตินา", "อาเจนตินา"]:
+    if u_ans9.strip().lower() in ["Argentina", "อาร์เจนตินา", "อาเจนตินา"]:
     st.success("✅ ข้อ 9: ถูกต้อง")
     score += 1
 else:
