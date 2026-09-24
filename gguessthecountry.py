@@ -134,46 +134,17 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 
 st.divider()
 
-# 3. ช่องรับคำตอบ (ใช้ value ผูกกับตัวแปรตรงๆ เพื่อสั่งเคลียร์ได้)
-ans1 = st.text_input(
-    "ข้อ 1:mexico:",
-    value=st.session_state.ans1_val,
-)
-ans2 = st.text_input(
-    "ข้อ 2:egypt:",
-    value=st.session_state.ans2_val,
-)
-ans3 = st.text_input(
-    "ข้อ 3:jp:",
-    value=st.session_state.ans3_val,
-)
-ans4 = st.text_input(
-    "ข้อ 4:kr:",
-    value=st.session_state.ans4_val,
-)
-ans5 = st.text_input(
-    "ข้อ 5:colombia:",
-    value=st.session_state.ans5_val,
-)
-ans6 = st.text_input(
-    "ข้อ 6:portugal:",
-    value=st.session_state.ans6_val,
-)
-ans7 = st.text_input(
-    "ข้อ 7:fr:",
-    value=st.session_state.ans7_val,
-)
-ans8 = st.text_input(
-    "ข้อ 8:de:",
-    value=st.session_state.ans8_val,
-)
-ans9 = st.text_input(
-    "ข้อ 9:argentina:",
-    value=st.session_state.ans9_val,
-)
-ans10 = st.text_input(
-    "ข้อ 10:south_africa:",
-    value=st.session_state.ans10_val,)
+# 3. ช่องรับคำตอบ 
+ans1 = st.text_input("ข้อ 1 🇲🇽 :", value=st.session_state.ans1_val)
+ans2 = st.text_input("ข้อ 2 🇪🇬 :", value=st.session_state.ans2_val)
+ans3 = st.text_input("ข้อ 3 🇯🇵 :", value=st.session_state.ans3_val)
+ans4 = st.text_input("ข้อ 4 🇰🇷 :", value=st.session_state.ans4_val)
+ans5 = st.text_input("ข้อ 5 🇨🇴 :", value=st.session_state.ans5_val)
+ans6 = st.text_input("ข้อ 6 🇵🇹 :", value=st.session_state.ans6_val)
+ans7 = st.text_input("ข้อ 7 🇫🇷 :", value=st.session_state.ans7_val)
+ans8 = st.text_input("ข้อ 8 🇩🇪 :", value=st.session_state.ans8_val)
+ans9 = st.text_input("ข้อ 9 🇦🇷 :", value=st.session_state.ans9_val)
+ans10 = st.text_input("ข้อ 10 🇿🇦 :", value=st.session_state.ans10_val)
 
 # อัปเดตค่าล่าสุดเข้าตัวแปร
 st.session_state.ans1_val = ans1
