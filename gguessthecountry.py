@@ -135,16 +135,36 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 st.divider()
 
 # 3. ช่องรับคำตอบ 
-ans1 = st.text_input("ข้อ 1 🇲🇽 :", value=st.session_state.ans1_val)
-ans2 = st.text_input("ข้อ 2 🇪🇬 :", value=st.session_state.ans2_val)
-ans3 = st.text_input("ข้อ 3 🇯🇵 :", value=st.session_state.ans3_val)
-ans4 = st.text_input("ข้อ 4 🇰🇷 :", value=st.session_state.ans4_val)
-ans5 = st.text_input("ข้อ 5 🇨🇴 :", value=st.session_state.ans5_val)
-ans6 = st.text_input("ข้อ 6 🇵🇹 :", value=st.session_state.ans6_val)
-ans7 = st.text_input("ข้อ 7 🇫🇷 :", value=st.session_state.ans7_val)
-ans8 = st.text_input("ข้อ 8 🇩🇪 :", value=st.session_state.ans8_val)
-ans9 = st.text_input("ข้อ 9 🇦🇷 :", value=st.session_state.ans9_val)
-ans10 = st.text_input("ข้อ 10 🇿🇦 :", value=st.session_state.ans10_val)
+# 3. ช่องรับคำตอบ (ใช้รูปภาพธงชาติผ่าน HTML)
+st.markdown("### ข้อ 1 <img src='https://flagcdn.com/w40/mx.png' width='30'>", unsafe_allow_html=True)
+ans1 = st.text_input("ข้อ 1", value=st.session_state.ans1_val, label_visibility="collapsed")
+
+st.markdown("### ข้อ 2 <img src='https://flagcdn.com/w40/eg.png' width='30'>", unsafe_allow_html=True)
+ans2 = st.text_input("ข้อ 2", value=st.session_state.ans2_val, label_visibility="collapsed")
+
+st.markdown("### ข้อ 3 <img src='https://flagcdn.com/w40/jp.png' width='30'>", unsafe_allow_html=True)
+ans3 = st.text_input("ข้อ 3", value=st.session_state.ans3_val, label_visibility="collapsed")
+
+st.markdown("### ข้อ 4 <img src='https://flagcdn.com/w40/kr.png' width='30'>", unsafe_allow_html=True)
+ans4 = st.text_input("ข้อ 4", value=st.session_state.ans4_val, label_visibility="collapsed")
+
+st.markdown("### ข้อ 5 <img src='https://flagcdn.com/w40/co.png' width='30'>", unsafe_allow_html=True)
+ans5 = st.text_input("ข้อ 5", value=st.session_state.ans5_val, label_visibility="collapsed")
+
+st.markdown("### ข้อ 6 <img src='https://flagcdn.com/w40/pt.png' width='30'>", unsafe_allow_html=True)
+ans6 = st.text_input("ข้อ 6", value=st.session_state.ans6_val, label_visibility="collapsed")
+
+st.markdown("### ข้อ 7 <img src='https://flagcdn.com/w40/fr.png' width='30'>", unsafe_allow_html=True)
+ans7 = st.text_input("ข้อ 7", value=st.session_state.ans7_val, label_visibility="collapsed")
+
+st.markdown("### ข้อ 8 <img src='https://flagcdn.com/w40/de.png' width='30'>", unsafe_allow_html=True)
+ans8 = st.text_input("ข้อ 8", value=st.session_state.ans8_val, label_visibility="collapsed")
+
+st.markdown("### ข้อ 9 <img src='https://flagcdn.com/w40/ar.png' width='30'>", unsafe_allow_html=True)
+ans9 = st.text_input("ข้อ 9", value=st.session_state.ans9_val, label_visibility="collapsed")
+
+st.markdown("### ข้อ 10 <img src='https://flagcdn.com/w40/za.png' width='30'>", unsafe_allow_html=True)
+ans10 = st.text_input("ข้อ 10", value=st.session_state.ans10_val, label_visibility="collapsed")
 
 # อัปเดตค่าล่าสุดเข้าตัวแปร
 st.session_state.ans1_val = ans1
