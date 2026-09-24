@@ -134,8 +134,7 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 
 st.divider()
 
-# 3. ช่องรับคำตอบ 
-# 3. ช่องรับคำตอบ (ใช้รูปภาพธงชาติผ่าน HTML)
+# 3. ช่องรับคำตอบ ใช้รูปภาพธงชาติผ่าน HTML
 st.markdown("### ข้อ 1 <img src='https://flagcdn.com/w40/mx.png' width='30'>", unsafe_allow_html=True)
 ans1 = st.text_input("ข้อ 1", value=st.session_state.ans1_val, label_visibility="collapsed")
 
